@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Login</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #111827, #1e3a8a);
+}
+
+.login-box {
+  width: 90%;
+  max-width: 380px;
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 40px rgba(0,0,0,.4);
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  color: #d1d5db;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.telegram {
+  display: block;
+  margin-top: 15px;
+  padding: 13px;
+  border-radius: 10px;
+  background: #229ed9;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#error {
+  color: #ff7777;
+  margin-top: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+  <h1>🔐 Login</h1>
+  <p>Enter your password to continue</p>
+
+  <input type="password" id="password" placeholder="Enter password">
+
+  <button onclick="login()">LOGIN</button>
+
+  <a class="telegram"
+     href="https://t.me/+XiZq3s3NhjAxYzE1"
+     target="_blank">
+     📲 Join Telegram
+  </a>
+
+  <div id="error"></div>
+</div>
+
+<script>
+const PASSWORD = "1316";
+
+// Replace this with your own legitimate website/page.
+const SUCCESS_URL = "https://example.com/";
+
+function login() {
+  const entered = document.getElementById("password").value;
+  const error = document.getElementById("error");
+
+  if (entered === PASSWORD) {
+    window.location.href = SUCCESS_URL;
+  } else {
+    error.textContent = "❌ Wrong password! Please join Telegram.";
+  }
+}
+</script>
+
+</body>
+</html>
